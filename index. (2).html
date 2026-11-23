@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>LKPD Digital — Hukum Pascal</title>
+<style>
+:root{--navy:#173b62;--blue:#2877b8;--sky:#eaf5ff;--gold:#e4bd68;--ink:#243447;--paper:#fff}
+*{box-sizing:border-box}body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--ink);background:linear-gradient(135deg,#d9eff8,#f7faff 45%,#e5f0f7);line-height:1.55}
+header{padding:32px 18px 25px;text-align:center;background:linear-gradient(120deg,#163b63,#2786bd);color:white;border-bottom:5px solid var(--gold)}
+header .eyebrow{letter-spacing:2px;font-size:.8rem;text-transform:uppercase;opacity:.9}h1{margin:8px 0;font-family:Georgia,serif;font-size:clamp(1.8rem,4vw,2.8rem)}header p{margin:8px auto 0;max-width:700px}
+main{max-width:1000px;margin:24px auto;padding:0 14px 40px}
+.card{background:var(--paper);border:1px solid #d2e2ee;border-radius:16px;padding:22px;margin:16px 0;box-shadow:0 8px 24px #1c4e7010}
+h2{font-family:Georgia,serif;color:var(--navy);margin:0 0 14px;font-size:1.45rem;border-bottom:2px solid #d9eaf5;padding-bottom:8px}
+h3{color:var(--blue);margin:16px 0 8px}
+.tag{display:inline-block;background:#e7f3fc;color:#205c8a;border-radius:20px;padding:4px 11px;font-size:.8rem;font-weight:bold}
+p{margin:8px 0}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
+label{display:block;font-weight:600;margin-bottom:5px}input,select,textarea{width:100%;padding:10px;border:1px solid #b8cddd;border-radius:8px;font:inherit;background:#fff}
+textarea{min-height:90px;resize:vertical}.hint{font-size:.9rem;color:#5c7082}
+.steps li{margin:8px 0;padding-left:4px}
+table{width:100%;border-collapse:collapse;margin:10px 0 14px;font-size:.94rem}
+th,td{border:1px solid #9eb8cb;padding:9px;text-align:center}
+th{background:#e8f3fb;color:#173b62}td input{min-width:70px;text-align:center;padding:7px}
+.btns{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}
+button{border:0;border-radius:9px;padding:11px 16px;font:inherit;font-weight:700;cursor:pointer;background:var(--blue);color:white}
+button.secondary{background:#e8f1f7;color:var(--navy)}button.gold{background:#b98724}
+.callout{background:#f6f9fc;border-left:4px solid var(--gold);padding:12px 14px;border-radius:7px}
+footer{text-align:center;padding:20px;color:#63798a;font-size:.85rem}
+@media print{body{background:white}.card{box-shadow:none;break-inside:avoid}header{background:white;color:#173b62;border-bottom:2px solid #173b62}.btns,.no-print{display:none}main{max-width:none;margin:0;padding:0}.card{margin:10px 0;padding:14px}}
+</style>
+</head>
+<body>
+<header>
+<div class="eyebrow">Lembar Kerja Peserta Didik Digital</div>
+<h1>Eksperimen Hukum Pascal</h1>
+<p>Pengaruh penambahan massa beban terhadap perubahan tekanan pada pengisap pertama dan pengisap kedua</p>
+</header>
+<main>
+<section class="card">
+<span class="tag">Identitas Peserta Didik</span>
+<div class="grid" style="margin-top:12px">
+<div><label for="nama">Nama</label><input id="nama" placeholder="Nama peserta didik"></div>
+<div><label for="kelas">Kelas / Kelompok</label><input id="kelas" placeholder="Kelas dan kelompok"></div>
+<div><label for="tanggal">Tanggal praktikum</label><input id="tanggal" type="date"></div>
+</div>
+</section>
+
+<section class="card">
+<h2>A. Rumusan Masalah</h2>
+<ol>
+<li>Bagaimana pengaruh penambahan massa beban dari 250 kg menjadi 500 kg terhadap perubahan tekanan pada pengisap pertama dan pengisap kedua?</li>
+<li>Apakah perubahan tekanan pada pengisap pertama diteruskan sama besar ke pengisap kedua sesuai dengan prinsip Hukum Pascal?</li>
+</ol>
+</section>
+
+<section class="card">
+<h2>B. Tujuan Praktikum</h2>
+<ol>
+<li>Peserta didik dapat menjelaskan Hukum Pascal.</li>
+<li>Peserta didik dapat mempraktikkan Hukum Pascal melalui simulasi dan mengamati perubahan tekanan akibat penambahan massa beban.</li>
+</ol>
+</section>
+
+<section class="card">
+<h2>C. Hipotesis</h2>
+<p><b>Hipotesis 1.</b> Semakin besar massa beban yang diberikan pada pengisap, semakin besar gaya tekan yang dihasilkan. Jika luas penampang tetap, tekanan yang diberikan juga semakin besar.</p>
+<p><b>Hipotesis 2.</b> Perubahan tekanan pada pengisap pertama diteruskan sama besar ke pengisap kedua apabila zat cair berada dalam ruang tertutup, kedua sensor berada pada ketinggian yang sama, dan sistem dianggap ideal.</p>
+<div class="grid">
+<div><label for="h1">Prediksi / hipotesis kelompok untuk rumusan masalah 1</label><textarea id="h1" placeholder="Tuliskan prediksi kelompok..."></textarea></div>
+<div><label for="h2">Prediksi / hipotesis kelompok untuk rumusan masalah 2</label><textarea id="h2" placeholder="Tuliskan prediksi kelompok..."></textarea></div>
+</div>
+</section>
+
+<section class="card">
+<h2>D. Variabel Praktikum</h2>
+<table>
+<thead><tr><th>Jenis variabel</th><th>Variabel</th><th>Keterangan</th></tr></thead>
+<tbody>
+<tr><td>Bebas</td><td>Massa beban</td><td>250 kg dan 500 kg</td></tr>
+<tr><td>Terikat</td><td>Perubahan tekanan</td><td>Tekanan pada pengisap 1 dan pengisap 2</td></tr>
+<tr><td>Kontrol</td><td>Kondisi sistem</td><td>Jenis zat cair, luas pengisap, posisi sensor, dan kondisi awal dijaga tetap</td></tr>
+</tbody></table>
+</section>
+
+<section class="card">
+<h2>E. Langkah-Langkah Praktikum</h2>
+<ol class="steps">
+<li>Pindai kode QR pada LKPD cetak atau buka simulasi PhET melalui tautan berikut: <a href="https://phet.colorado.edu/" target="_blank" rel="noopener">PhET Interactive Simulations</a>. Pilih simulasi yang digunakan untuk eksperimen Hukum Pascal.</li>
+<li>Pilih dan jalankan simulasi.</li>
+<li>Pilih simulasi urutan ketiga sesuai petunjuk pada lembar praktikum.</li>
+<li>Klik <i>Grid</i> dan pilih <i>Atmosphere On</i>.</li>
+<li>Pilih <i>Pressure</i>, kemudian letakkan pengisap/sensor pada zat cair sesuai tampilan simulasi.</li>
+<li>Masukkan atau letakkan beban 250 kg pada pengisap pertama. Amati tekanan awal dan tekanan akhir pada pengisap 1 serta pengisap 2.</li>
+<li>Ulangi pengamatan dengan massa beban 500 kg. Pastikan kondisi awal dan posisi sensor tetap sama.</li>
+<li>Catat hasil pengamatan pada Tabel 3.1, lalu hitung perubahan tekanan pada Tabel 3.2.</li>
+</ol>
+<div class="callout"><b>Catatan:</b> Gunakan satuan tekanan yang sama (kPa) untuk seluruh data. Tekanan awal dan akhir diambil dari pembacaan simulasi, bukan diperkirakan.</div>
+</section>
+
+<section class="card">
+<h2>F. Hasil Pengamatan</h2>
+<h3>Tabel 3.1. Hasil Pengamatan Tekanan</h3>
+<p class="hint">Masukkan nilai tekanan yang terbaca pada simulasi. Sel kosong dapat diisi langsung.</p>
+<table>
+<thead>
+<tr><th rowspan="2">Massa beban (kg)</th><th colspan="2">Pengisap 1 (kPa)</th><th colspan="2">Pengisap 2 (kPa)</th></tr>
+<tr><th>Awal</th><th>Akhir</th><th>Awal</th><th>Akhir</th></tr>
+</thead>
+<tbody>
+<tr><td>250</td><td><input type="number" step="any" id="p1a250" aria-label="Pengisap 1 awal 250"></td><td><input type="number" step="any" id="p1b250" aria-label="Pengisap 1 akhir 250"></td><td><input type="number" step="any" id="p2a250" aria-label="Pengisap 2 awal 250"></td><td><input type="number" step="any" id="p2b250" aria-label="Pengisap 2 akhir 250"></td></tr>
+<tr><td>500</td><td><input type="number" step="any" id="p1a500" aria-label="Pengisap 1 awal 500"></td><td><input type="number" step="any" id="p1b500" aria-label="Pengisap 1 akhir 500"></td><td><input type="number" step="any" id="p2a500" aria-label="Pengisap 2 awal 500"></td><td><input type="number" step="any" id="p2b500" aria-label="Pengisap 2 akhir 500"></td></tr>
+</tbody></table>
+
+<h3>Tabel 3.2. Perubahan Tekanan</h3>
+<table>
+<thead><tr><th>Massa beban (kg)</th><th>ΔP pengisap 1 (kPa)</th><th>ΔP pengisap 2 (kPa)</th></tr></thead>
+<tbody>
+<tr><td>250</td><td id="dp1250">—</td><td id="dp2250">—</td></tr>
+<tr><td>500</td><td id="dp1500">—</td><td id="dp2500">—</td></tr>
+</tbody></table>
+<div class="callout"><b>Rumus perubahan tekanan:</b><br>ΔP = P akhir − P awal<br><span class="hint">Tekanan total yang tercatat pada simulasi digunakan untuk menghitung perubahan tekanan.</span></div>
+<div class="btns no-print"><button onclick="hitung()">Hitung perubahan tekanan</button><button class="secondary" onclick="resetData()">Kosongkan data</button></div>
+</section>
+
+<section class="card">
+<h2>G. Analisis Hasil Pengamatan</h2>
+<p><b>1.</b> Bagaimana pengaruh penambahan massa beban dari 250 kg menjadi 500 kg terhadap perubahan tekanan pada pengisap pertama dan pengisap kedua? Jelaskan berdasarkan hasil pengamatan dan perhitungan.</p>
+<textarea id="analisis1" placeholder="Tuliskan jawaban berdasarkan data pada tabel..."></textarea>
+<p><b>2.</b> Apakah perubahan tekanan pada pengisap pertama sama besar atau mendekati sama dengan perubahan tekanan pada pengisap kedua? Hubungkan jawabanmu dengan Hukum Pascal.</p>
+<textarea id="analisis2" placeholder="Bandingkan ΔP pengisap 1 dan ΔP pengisap 2..."></textarea>
+</section>
+
+<section class="card">
+<h2>H. Kesimpulan</h2>
+<p class="hint">Tuliskan kesimpulan berdasarkan tujuan, data hasil pengamatan, dan jawaban analisis.</p>
+<textarea id="kesimpulan" style="min-height:130px" placeholder="Berdasarkan praktikum, dapat disimpulkan bahwa..."></textarea>
+<div class="btns no-print">
+<button class="gold" onclick="window.print()">Cetak / Simpan sebagai PDF</button>
+<button class="secondary" onclick="simpan()">Simpan jawaban sebagai file teks</button>
+</div>
+</section>
+<footer>LKPD Digital • Eksperimen Hukum Pascal</footer>
+</main>
+<script>
+function val(id){const x=document.getElementById(id).value;return x===""?null:Number(x)}
+function fmt(n){return Number.isFinite(n)?n.toLocaleString('id-ID',{maximumFractionDigits:3}):'—'}
+function hitung(){
+ const rows=[250,500];
+ rows.forEach(m=>{
+  const a=val('p1a'+m),b=val('p1b'+m),c=val('p2a'+m),d=val('p2b'+m);
+  document.getElementById('dp1'+m).textContent=a===null||b===null?'—':fmt(b-a);
+  document.getElementById('dp2'+m).textContent=c===null||d===null?'—':fmt(d-c);
+ });
+}
+function resetData(){
+ ['p1a250','p1b250','p2a250','p2b250','p1a500','p1b500','p2a500','p2b500'].forEach(id=>document.getElementById(id).value='');
+ ['dp1250','dp2250','dp1500','dp2500'].forEach(id=>document.getElementById(id).textContent='—');
+}
+function simpan(){
+ const fields=[['Nama','nama'],['Kelas/Kelompok','kelas'],['Tanggal','tanggal'],['Hipotesis 1','h1'],['Hipotesis 2','h2'],['P1 awal 250 kg','p1a250'],['P1 akhir 250 kg','p1b250'],['P2 awal 250 kg','p2a250'],['P2 akhir 250 kg','p2b250'],['P1 awal 500 kg','p1a500'],['P1 akhir 500 kg','p1b500'],['P2 awal 500 kg','p2a500'],['P2 akhir 500 kg','p2b500'],['Analisis 1','analisis1'],['Analisis 2','analisis2'],['Kesimpulan','kesimpulan']];
+ let text='LKPD DIGITAL — EKSPERIMEN HUKUM PASCAL\\n\\n';
+ fields.forEach(([label,id])=>text+=label+': '+document.getElementById(id).value+'\\n');
+ const blob=new Blob([text],{type:'text/plain;charset=utf-8'}),url=URL.createObjectURL(blob),a=document.createElement('a');
+ a.href=url;a.download='Jawaban_LKPD_Hukum_Pascal.txt';a.click();URL.revokeObjectURL(url);
+}
+</script>
+</body>
+</html>
